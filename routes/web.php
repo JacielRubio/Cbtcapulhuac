@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/altaalum','tab_alumnos@altaalumnos');
+Route::POST('/guardalum','tab_alumnos@guardaalumno')->name('guardaalumno');

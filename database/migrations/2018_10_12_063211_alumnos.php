@@ -26,9 +26,9 @@ class Alumnos extends Migration
             $table->integer('Cp');
             $table->string('Municipio',25);
             $table->string('Estado',25);
-            $table->integer('id_carrera');
+            $table->integer('id_carrera')->unsigned();
             $table->foreign('id_carrera')->references('id_carrera')->on('carreras');
-            $table->integer('id_gen');
+            $table->integer('id_gen')->unsigned();
             $table->foreign('id_gen')->references('id_gen')->on('generaciones');
 
             $table->rememberToken();
