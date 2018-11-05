@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>Alta de carreras</h1>
+<h1>Alta de carros</h1>
 <br>
 <form action = "{{route('guardacarreras')}}" method = "POST" enctype='multipart/form-data'>
 {{csrf_field()}}
