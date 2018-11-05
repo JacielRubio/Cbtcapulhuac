@@ -96,5 +96,13 @@ class tab_alumnos extends Controller
            ->with('mensaje',$mensaje);
                 
            }
+         public function reportealumnos()
+	{
+	$alumnos = alumnos::withTrashed()
+	                      ->orderBy('Matricula','ASC')
+						  ->get();
+	return view('sistema.reporte')
+	->with('alumnos',$alumnos);
+	}
 
 }
